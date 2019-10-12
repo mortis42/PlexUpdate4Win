@@ -33,9 +33,10 @@ set UPDATEROOT=C:\Users\%username%\AppData\Local\Plex Media Server\Updates
 :: Set it to the same path as you will set for $DownloadFolder in Download-Installer.ps1
 set DOWNROOT=<PATH TO>\PlexUpdate4Win\packages
 
-set LOGFILE="PlexUpdate4Win.log"
-set MAINSCRIPT="PlexUpdate4Win-Main.cmd"
-set DISABLEPVR="DisablePVR.cmd"
+set STARTDIR=%~dp0
+set LOGFILE="%STARTDIR%\PlexUpdate4Win.log"
+set MAINSCRIPT="%STARTDIR%\PlexUpdate4Win-Main.cmd"
+set DISABLEPVR="%STARTDIR%\DisablePVR.cmd"
 
 ::::::::::::::::::::::::::::: Main Script ::::::::::::::::::::::::::::::::::::
 :: Usually you don't need to change anything here

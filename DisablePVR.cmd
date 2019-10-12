@@ -15,6 +15,8 @@ if exist %PVR% (
 )
 
 :RENAME
+:: First stop PVR, then disable
+taskkill /F /IM "Plex Tuner Service.exe" /T
 for /F "delims=." %%a in (%PVR%) do move /y %PVR% "%%a.disable" >nul
 echo Plex PVR Disabled
 goto:eof
